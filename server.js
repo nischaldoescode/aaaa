@@ -5,7 +5,6 @@ require('dotenv').config();
 
 const app = express();
 app.use(express.json());
-res.sendFile(path.join(process.cwd(), 'public', 'index.html'));
 
 // Append data to a blob
 app.post('/append-data', async (req, res) => {
@@ -44,3 +43,4 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+module.exports = app;
