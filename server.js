@@ -40,7 +40,7 @@ app.post('/append-data', async (req, res) => {
 
 // Fallback to index.html
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public'));
 });
 
 module.exports = app;
